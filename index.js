@@ -4,6 +4,7 @@ const back  = document.querySelector('.back');
 const card  = document.querySelector('.flip-card-inner');
 const btn   = document.querySelector('.btn');
 const li    = document.querySelectorAll('li');
+const span  =document.querySelector('.rating-content');
 
 // Add event listeners to each list item for selecting a rating
 li.forEach((item, index) => {
@@ -13,6 +14,8 @@ li.forEach((item, index) => {
         li.forEach(element => element.classList.remove('orange-Bc'));
         // Add highlight to the selected item
         item.classList.add('orange-Bc');
+        // Add rating based on user choice
+        span.innerText=`You selected ${index+1} out of 5`;
     });
     // Set tabindex for keyboard accessibility
     item.tabIndex = index;

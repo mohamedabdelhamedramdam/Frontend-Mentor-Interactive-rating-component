@@ -119,12 +119,12 @@ body {
   align-items: center;
   transform: rotateY(180deg);
 }
-.rating-cont {
+.rating {
   background-color: #2d3743;
   padding: 1rem 2rem;
   border-radius: 25px;
 }
-.rating-cont span {
+.rating span {
   color: #fc9042;
 }
 .heading2 {
