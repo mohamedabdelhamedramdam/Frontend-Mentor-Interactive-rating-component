@@ -1,0 +1,160 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--VeryDarkBlue);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Overpass;
+}
+.container {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  font-size: 1.5rem;
+  background: #252e37;
+  background: linear-gradient(0deg, #252e37, #1f252c);
+  max-width: 40rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.img-cont {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #3b424b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.star-icon {
+  width: 1.5rem;
+}
+.heading {
+  color: var(--White);
+  font-size: 2.8rem;
+}
+.content {
+  color: var(--LightGrey);
+  line-height: 1.5;
+}
+.number-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.list-element {
+  background-color: #3b424b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.list-element:focus {
+  outline: 2px solid var(--Orange);
+}
+
+.list-element a {
+  color: var(--LightGrey);
+  text-decoration: none;
+}
+.list-element:hover {
+  background-color: var(--White);
+}
+.list-element:hover a {
+  color: black;
+}
+.btn {
+  background-color: var(--Orange);
+  background-color: var(--Orange);
+  color: var(--VeryDarkBlue);
+  border-radius: 30px;
+  border: none;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn:hover {
+  background-color: var(--White);
+  color: black;
+  cursor: pointer;
+}
+.back {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+.rating-cont {
+  background-color: #2d3743;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+}
+.rating-cont span {
+  color: #fc9042;
+}
+.heading2 {
+  font-size: 3rem;
+  color: var(--White);
+}
+.content {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.flip {
+  transform: rotateY(180deg);
+}
+.hidden {
+  display: none;
+}
+.orange-Bc {
+  background-color: var(--Orange);
+}
+.orange-Bc:active {
+  background-color: var(--Orange);
+}
+.orange-Bc a {
+  color: black;
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  .flip-card-inner {
+    max-width: 35rem;
+  }
+}
