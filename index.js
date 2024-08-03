@@ -17,10 +17,6 @@ li.forEach((item, index) => {
         // Add rating based on user choice
         span.innerText=`You selected ${index+1} out of 5`;
     });
-    // Set tabindex for keyboard accessibility
-    item.tabIndex = index;
-    // Set role for screen readers
-    item.setAttribute('role', 'button');
 });
 
 // Helper function to check if any element in the list has a specific class

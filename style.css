@@ -35,7 +35,10 @@ body {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
+button {
+  background-color: transparent;
+  border: none;
+}
 .front {
   display: flex;
   flex-direction: column;
@@ -85,14 +88,14 @@ body {
   outline: 2px solid var(--Orange);
 }
 
-.list-element a {
+.list-element button {
   color: var(--LightGrey);
   text-decoration: none;
 }
 .list-element:hover {
   background-color: var(--White);
 }
-.list-element:hover a {
+.list-element:hover button {
   color: black;
 }
 .btn {
@@ -147,7 +150,7 @@ body {
 .orange-Bc:active {
   background-color: var(--Orange);
 }
-.orange-Bc a {
+.orange-Bc button {
   color: black;
 }
 @media (max-width: 400px) {
